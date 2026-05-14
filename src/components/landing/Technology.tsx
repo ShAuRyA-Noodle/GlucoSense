@@ -35,10 +35,10 @@ export default function Technology() {
             </h2>
             <div className="h-[2px] w-16 bg-accent rounded-full" />
           </div>
-          <ImageSlot src="/assets/antenna-closeup.jpg"
+          <ImageSlot src="/assets/antenna-closeup.png"
             alt="Flexible microwave antenna on Rogers R5880 substrate"
             className="w-full aspect-video rounded-2xl mt-10 lg:mt-0"
-            variant="light" label="Generate: antenna-closeup.jpg" />
+            variant="light" label="Flexible antenna close-up" />
         </div>
 
         {/* Spec cards — white on beige */}
@@ -53,10 +53,17 @@ export default function Technology() {
                           group ${i === 0 ? "lg:row-span-2 flex flex-col justify-end" : ""}`}>
               {i === 0 && (
                 <div className="mb-6">
-                  <div className="w-full aspect-video bg-[#083D77]/5 rounded-xl mb-4 flex items-center justify-center border border-[#B0C8D8]">
-                    <div className="text-center">
-                      <p className="font-heading font-900 text-[2.5rem] text-[#083D77]/20 leading-none">R5880</p>
-                      <p className="font-mono text-[9px] text-[#3A6080] uppercase tracking-label mt-1">Rogers</p>
+                  <div className="relative w-full aspect-video rounded-xl mb-4 overflow-hidden border border-[#B0C8D8] bg-[#083D77]/5">
+                    <img
+                      src="/assets/r5880.png"
+                      alt="Rogers R5880 flexible antenna close-up"
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#051E3E]/65 via-transparent to-transparent" />
+                    <div className="absolute bottom-4 left-4">
+                      <p className="font-heading font-900 text-[2rem] text-[#FAFAF8] leading-none">R5880</p>
+                      <p className="font-mono text-[9px] text-[#F4D35E] uppercase tracking-label mt-1">Rogers substrate</p>
                     </div>
                   </div>
                 </div>

@@ -67,10 +67,10 @@ export default function Physics() {
               </span>
             </div>
             <ImageSlot
-              src="/assets/physics-visual.jpg"
+              src="/assets/physics-visual.png"
               alt="Microwave electromagnetic field interacting with polar glucose molecules"
               className="w-full aspect-video rounded-2xl" variant="dark"
-              label="Generate: physics-visual.jpg" />
+              label="Microwave field visualization" />
           </div>
 
           {/* Right: numbered steps */}

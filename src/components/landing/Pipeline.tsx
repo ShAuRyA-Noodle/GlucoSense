@@ -79,12 +79,20 @@ export default function Pipeline() {
             style={{ height: "340px" }}>
             {/* Image area */}
             <div className="relative h-[170px] overflow-hidden" style={{ background: STAGE_GRADIENTS[step.step] }}>
+              <img
+                src={`/pipeline/stage-${step.step}.png`}
+                alt={`Stage ${step.step}: ${step.label}`}
+                className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.04]"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#051E3E]/72 via-[#051E3E]/18 to-[#051E3E]/40" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_120%,rgba(244,211,94,0.18),transparent_55%)] opacity-80" />
               <span className="absolute top-4 left-5 font-mono font-700 text-[10px] tracking-label uppercase text-white/25">
                 Stage {String(step.step).padStart(2, "0")}
               </span>
               <div className="absolute bottom-3 right-3">
                 <span className="font-mono text-[8px] text-white/20 tracking-widest uppercase">
-                  /pipeline/stage-{step.step}.jpg
+                  /pipeline/stage-{step.step}.png
                 </span>
               </div>
             </div>

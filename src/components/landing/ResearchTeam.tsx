@@ -23,10 +23,10 @@ export default function ResearchTeam() {
         <div className="lg:grid lg:grid-cols-[45fr_55fr] gap-12 mb-16">
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
-            <ImageSlot src="/assets/thapar-institute.jpg"
+            <ImageSlot src="/assets/thapar-institute.png"
               alt="Thapar Institute of Engineering and Technology, Patiala"
               className="w-full aspect-[4/3] rounded-2xl mb-6" variant="dark"
-              label="Generate: thapar-institute.jpg" />
+              label="Thapar Institute campus" />
             <p className="font-body text-[#C2DCE8] text-sm leading-relaxed">
               Department of Electronics and Communication Engineering at
               Thapar Institute of Engineering and Technology, Patiala, India.

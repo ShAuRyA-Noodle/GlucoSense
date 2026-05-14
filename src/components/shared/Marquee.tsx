@@ -31,10 +31,28 @@ const BG = {
 export default function Marquee({ variant = "dark", reverse = false }: Props) {
   const isDark = variant === "dark";
   const bg     = BG[variant];
+  const trackClass = reverse ? "animate-marquee-rev" : "animate-marquee";
+
+  const renderItems = () =>
+    [...ITEMS, ...ITEMS].map((item, i) => (
+      <span key={`${item}-${i}`} className="inline-flex items-center gap-5 px-5">
+        <span className={`font-mono font-500 text-[10.5px] tracking-[0.2em] uppercase
+          ${isDark ? "text-white/45" : "text-[#083D77]/65"}`}>
+          {item}
+        </span>
+        <span
+          className="h-1 w-8 rounded-full flex-shrink-0"
+          style={{
+            backgroundColor: i % 3 === 0 ? "#DA4167" : i % 3 === 1 ? "#F4D35E" : "#F78764",
+            opacity: isDark ? 0.52 : 0.7,
+          }}
+        />
+      </span>
+    ));
 
   return (
     <div
-      className={`relative py-[14px] overflow-hidden border-y
+      className={`relative overflow-hidden border-y
         ${isDark
           ? "border-white/[0.06]"
           : "border-navy/[0.1]"
@@ -52,27 +70,16 @@ export default function Marquee({ variant = "dark", reverse = false }: Props) {
         style={{ background: `linear-gradient(to left, ${bg} 30%, transparent 100%)` }}
       />
 
-      <div
-        className={`flex whitespace-nowrap will-change-transform
-          ${reverse ? "animate-marquee-rev" : "animate-marquee"}
-          hover:[animation-play-state:paused]`}
-        style={{ width: "max-content" }}
-      >
-        {[...ITEMS, ...ITEMS].map((item, i) => (
-          <span key={i} className="inline-flex items-center gap-5 px-5">
-            <span className={`font-mono font-500 text-[10.5px] tracking-[0.2em] uppercase
-              ${isDark ? "text-white/40" : "text-[#083D77]/55"}`}>
-              {item}
-            </span>
-            <span
-              className="w-1 h-1 rounded-full flex-shrink-0"
-              style={{
-                backgroundColor: i % 3 === 0 ? "#DA4167" : i % 3 === 1 ? "#F4D35E" : "#F78764",
-                opacity: 0.6,
-              }}
-            />
-          </span>
-        ))}
+      <div className="group relative h-[52px] overflow-hidden">
+        <div
+          className={`marquee-track absolute left-0 top-1/2 flex w-max -translate-y-1/2 whitespace-nowrap
+            will-change-transform ${trackClass}
+            group-hover:[animation-play-state:paused]`}
+          aria-label="Research highlights ticker"
+          style={{ animationDuration: "24s" }}
+        >
+          {renderItems()}
+        </div>
       </div>
     </div>
   );

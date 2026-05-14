@@ -117,3 +117,11 @@ html.lenis, html.lenis body { height: auto; }
 
 /* ── Magnetic button base ──────────────────────────────────── */
 .magnetic-target { cursor: none; }
+
+/* ── Kinetic marquee strip ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
