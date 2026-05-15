@@ -3,3 +3,13 @@ dist/
 .env
 .env.local
 .DS_Store
+*.pkl
+*.keras
+*.h5
+nb_run.log
+.claude/
+*.png
+__pycache__/
+.ipynb_checkpoints/
+Data_Real/*.png
+"Kaggle Data"/*.png
