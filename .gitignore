@@ -13,3 +13,7 @@ __pycache__/
 .ipynb_checkpoints/
 Data_Real/*.png
 "Kaggle Data"/*.png
+
+# Production bundle — keep all artifacts in git for teacher/mentor review
+!Production_Annihilator/**/*.pkl
+!Production_Annihilator/**/*.png
