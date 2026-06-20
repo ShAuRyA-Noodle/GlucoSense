@@ -5,7 +5,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Primary palette — from user's Caramel-Rajma aesthetic
+        // Primary palette for the GlucoSense aesthetic
         navy:       "#083D77",
         "navy-deep":"#051E3E",
         cream:      "#FEF6E4",   // warm golden — complement to navy blue

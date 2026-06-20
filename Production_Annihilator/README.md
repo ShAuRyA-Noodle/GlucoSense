@@ -124,4 +124,4 @@ Based on Thapar Institute paper: "ML based Blood Glucose Level Detection using M
 - Training time: ~5 minutes
 
 ## Repository
-https://github.com/ShAuRyA-Noodle/Caramel-Rajma
+https://github.com/ShAuRyA-Noodle/GlucoSense

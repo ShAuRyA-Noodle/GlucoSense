@@ -282,5 +282,5 @@ Overfit gap 0.22 because `HbA1c_level` ≥ 6.5 and `blood_glucose_level` ≥ 126
 
 ## CONTACT
 - Owner: chetangupta11@gmail.com
-- Repository: ShAuRyA-Noodle/Caramel-Rajma
+- Repository: ShAuRyA-Noodle/GlucoSense
 - Last updated: 2026-05-17
